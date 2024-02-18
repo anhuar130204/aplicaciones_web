@@ -1,0 +1,15 @@
+$def with (contactos)
+
+    <h1>Contactos</h1>
+    <table style="border-color: aqua; ">
+        <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+        </tr>
+        $for contacto in contactos:
+            <tr>
+                <td>$contacto['nombre']</td>
+                <td>$contacto['correo']</td>
+            </tr>
+    </table>
+

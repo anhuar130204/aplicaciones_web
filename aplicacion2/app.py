@@ -1,10 +1,12 @@
-"""libreria web.py"""
-#rutas de los controladores
+
 import web
 
 urls = (
-    '/', 'mvc.controllers.hello.Hello',
-    '/pagina2', 'mvc.controllers.pagina2.Pagina2'  
+    '/', 'mvc.controllers.lista_productos.Productos',
+    '/insertar', 'mvc.controllers.insertar_productos.Insertar',
+    '/detalle','mvc.controllers.detalle_productos.Detalle',
+    '/borrar','mvc.controllers.borrar_productos.Borrar',
+    '/actualizar','mvc.controllers.actualizar_productos.Actualizar'
 )
 app = web.application(urls, globals())
 

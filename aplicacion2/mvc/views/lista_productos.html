@@ -1,0 +1,26 @@
+$def with (productos)
+
+    <h1>productos</h1>
+    <a href="/insertar">insertar</a>
+
+    
+    <table style="border-color: aqua; ">
+        <tr>
+            <th>Nombre</th>
+            <th>descripcion</th>
+            <th>precio</th>
+            <th>existencias</th>
+            <th>opciones</th>
+        </tr>
+        $for producto in productos:
+            <tr>
+                <td>$producto['nombre']</td>
+                <td>$producto['descripcion']</td>
+                <td>$producto['precio']</td>
+                <td>$producto['existencias']</td>
+                <td><a href="/detalle">ver</a>
+                    <a href="/borrar">borrar</a>
+                    <a href="/actualizar">actualizar</a></td>
+            </tr>
+    </table>
+
