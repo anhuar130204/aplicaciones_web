@@ -6,13 +6,12 @@ m_productos = ModeloProductos()
 render = web.template.render('mvc/views', base="master")
 
 class Actualizar:
-    def GET(self, id_producto):
+    def GET(self):
         try:
-            producto = m_productos.detalleProducto(int(id_producto))
-            
-            return render.actualizar_productos(producto)
+            # Simplemente renderiza la plantilla del formulario
+            return render.actualizar_productos()
         except Exception as e:
-            return "Error: {}".format(str(e))
+            return "Error " + str(e.args)
 
     def POST(self):
         try:

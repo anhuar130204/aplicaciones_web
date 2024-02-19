@@ -5,13 +5,12 @@ render = web.template.render('mvc/views/')
 m_productos = ModeloProductos()
 
 class Borrar:
-    def GET(self, id):
+    def GET(self):
         try:
-            # Lógica para obtener los detalles del producto con el ID especificado
-            producto = m_productos.detalleProducto(id)
-            return render.borrar_producto(producto)
+            # Simplemente renderiza la plantilla del formulario
+            return render.borrar_productos()
         except Exception as e:
-            return "Ocurrió un error al obtener los detalles del producto: {}".format(str(e))
+            return "Error " + str(e.args)
     
     def POST(self, id):
         try:

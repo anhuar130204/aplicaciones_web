@@ -2,11 +2,11 @@
 <body>
     <h2>Actualizar Producto</h2>
     <form method="POST" action="/actualizar">
-        <input type="hidden" name="id" value="$producto_id">
-        Nombre: <input type="text" name="nombre" value="$producto['nombre']"><br>
-        Descripción: <input type="text" name="descripcion" value="$producto['descripcion']"><br>
-        Precio: <input type="text" name="precio" value="$producto['precio']"><br>
-        Existencias: <input type="text" name="existencias" value="$producto['existencias']"><br>
+        <input type="hidden" name="id" value="producto_id">
+        Nombre: <input type="text" name="nombre" value="nombre"><br>
+        Descripción: <input type="text" name="descripcion" value="descripcion"><br>
+        Precio: <input type="text" name="precio" value="precio"><br>
+        Existencias: <input type="text" name="existencias" value="existencias"><br>
         <input type="submit" value="Actualizar">
         <input type="submit" value="Cancelar">
     </form>
